@@ -1,24 +1,6 @@
+
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
 
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
 
 <head>
@@ -28,40 +10,82 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
     <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-    <!-- Good default declaration:
-    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-        * Enable inline JS: add 'unsafe-inline' to default-src
-        * Enable eval(): add 'unsafe-eval' to default-src
-    * Create your own at http://cspisawesome.com
-    -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
 
-    <!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
-    <link rel="stylesheet" type="text/css" href="css/portfolio.css" />
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/sweetalert.css" />
-    <link rel="stylesheet" type="text/css" href="css/swal-forms.css" />
-    <!-- <script src="js/jquery.mobile-1.4.3.min.js"></script> -->
-    <script src="phonegap.js"></script>
 
-    <script src="js/jquery-1.9.1.js"></script>
-    <script src="js/sweetalert.min.js"></script>
-    <script src="js/swal-forms.js"></script>
-    <script src="js/custom.js"></script>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700,900' rel='stylesheet' type='text/css'> -->
+    <link rel="stylesheet" href="css/css/themes/default/jquery.mobile-1.4.5.css">
+    <link type="text/css" rel="stylesheet" href="css/css/style.css" />
+    <link type="text/css" rel="stylesheet" href="css/css/style.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/css/colors/yellow.css" />
+   
 
-    <title>Shell App Template v.2</title>
+    <title>Shell App Template v.1</title>
 </head>
 
-<body class="green">
+<!-- <body class="green">
     Loading ...
 
     <script type="text/javascript">
         app.initialize();
-    </script>
+    </script> -->
+<?php
+  $finish = (isset($finish)) ? $finish : false;
+?>
+<body>
 
+<div data-role="page" id="homepage"  data-theme="b" class="">
+
+    <div data-role="" data-position="fixed">
+        <div class="nav_center_logo"></div>
+        <div class="clear"></div>
+    </div>
+            <div role="main" class="ui-content">
+
+        <div class="logo_container">
+            <div class="logo">
+            <img src="css/css/images/logo3.png" alt="shell" title="shell" />
+            <h2>Shell</h2>
+            <span></span>                        
+            </div>                     
+        </div>
+
+    </div>
+
+
+
+    
+
+
+       <input type="hidden" id="is_finish" value="<?=$finish?>">
+       <div data-role="footer" class="ui-footer ui-bar-inherit">
+    <h4 class="banner_footer"><span class="v-align">Powered by</span> <img class="btm_logo" src="css/css/images/header_logo_p1.png"></h4>
+
+<!-- <script>
+  $(function(){
+
+
+    check_finish();
+
+
+    function check_finish(){
+      var is_finish = $('#is_finish').val();
+
+      if(is_finish){
+
+        swal({
+          title: "Thank you for shopping!",
+          type:'success',
+          text: "Your order is now on process and will be ready in a minute.",
+          timer: 7000,
+          showConfirmButton: false
+        });
+        
+      }      
+    }
+
+  });
+
+</script> -->
 </body>
 
 </html>
