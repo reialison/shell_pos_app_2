@@ -2,7 +2,7 @@ $(document).ready(function(){
         document.addEventListener("deviceready", onDeviceReady, false);
         function onDeviceReady() {
             if (window.StatusBar) window.StatusBar.hide();
-            base_url ='http://www.pointonesolutions.com.ph/shell_pos/app';
+            base_url ='http://www.pointonesolutions.com.ph/shell_pos/app2';
             new_address(base_url);
         }
 
